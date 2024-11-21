@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donors Found</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Blood Donation System</h1>
+        <ul class="navbar">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('donate') }}">Donate Blood</a></li>
+            <li><a href="{{ url_for('request_blood') }}">Request Blood</a></li>
+            <li><a href="{{ url_for('admin_dashboard') }}">Admin Dashboard</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <h2>Donors Found for Blood Group {{ blood_group }}</h2>
+        <ul>
+            {% for donor in donors %}
+                <li>{{ donor[0] }} - {{ donor[1] }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

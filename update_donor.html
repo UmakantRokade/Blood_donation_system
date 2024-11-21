@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 style="text-align: center; margin-top: 20px;">Update Donor</h2>
+<form method="POST" action="" style="max-width: 500px; margin: 0 auto;">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" value="{{ donor[1] }}" required>
+    
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" value="{{ donor[2] }}" required>
+    
+    <label for="blood_group">Blood Group:</label>
+    <select id="blood_group" name="blood_group" required>
+        <option value="{{ donor[3] }}" selected>{{ donor[3] }}</option>
+        <option value="A+">A+</option>
+        <option value="A-">A-</option>
+        <option value="B+">B+</option>
+        <option value="B-">B-</option>
+        <option value="AB+">AB+</option>
+        <option value="AB-">AB-</option>
+        <option value="O+">O+</option>
+        <option value="O-">O-</option>
+    </select>
+    
+    <label for="contact">Contact:</label>
+    <input type="text" id="contact" name="contact" value="{{ donor[4] }}" required>
+    
+    <button type="submit">Update Donor</button>
+</form>
+{% endblock %}

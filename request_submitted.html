@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Submitted</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Blood Donation System</h1>
+        <ul class="navbar">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('donate') }}">Donate Blood</a></li>
+            <li><a href="{{ url_for('request_blood') }}">Request Blood</a></li>
+            <li><a href="{{ url_for('admin_dashboard') }}">Admin Dashboard</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <h2>Request Submitted</h2>
+        <p>Your blood request has been submitted. We will notify you when a matching donor is found.</p>
+    </div>
+</body>
+</html>

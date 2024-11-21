@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 style="text-align: center; margin-top: 20px;">Update Request</h2>
+<form method="POST" action="" style="max-width: 500px; margin: 0 auto;">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" value="{{ request_data[1] }}" required>
+    
+    <label for="blood_group">Blood Group:</label>
+    <select id="blood_group" name="blood_group" required>
+        <option value="{{ request_data[2] }}" selected>{{ request_data[2] }}</option>
+        <option value="A+">A+</option>
+        <option value="A-">A-</option>
+        <option value="B+">B+</option>
+        <option value="B-">B-</option>
+        <option value="AB+">AB+</option>
+        <option value="AB-">AB-</option>
+        <option value="O+">O+</option>
+        <option value="O-">O-</option>
+    </select>
+    
+    <label for="location">Location:</label>
+    <input type="text" id="location" name="location" value="{{ request_data[3] }}" required>
+    
+    <label for="contact">Contact:</label>
+    <input type="text" id="contact" name="contact" value="{{ request_data[4] }}" required>
+    
+    <button type="submit">Update Request</button>
+</form>
+{% endblock %}

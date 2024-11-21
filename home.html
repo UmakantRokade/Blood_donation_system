@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Blood Donation System</h1>
+        <ul class="navbar">
+            <li><a href="{{ url_for('home') }}" class="active">Home</a></li>
+            <li><a href="{{ url_for('donate') }}">Donate Blood</a></li>
+            <li><a href="{{ url_for('request_blood') }}">Request Blood</a></li>
+            <li><a href="{{ url_for('admin_dashboard') }}">Admin Dashboard</a></li>
+        </ul>
+    </header>
+
+    <div class="welcome-container">
+        <h2>Welcome to the Blood Donation System</h2>
+        <p>Save lives by donating blood or requesting blood when in need.</p>
+        <div class="button-container">
+            <a href="{{ url_for('donate') }}" class="action-button">Donate Blood</a>
+            <a href="{{ url_for('request_blood') }}" class="action-button">Request Blood</a>
+        </div>
+    </div>
+</body>
+</html>
